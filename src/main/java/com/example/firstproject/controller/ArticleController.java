@@ -33,7 +33,7 @@ public class ArticleController {
         // 2. 리파지터리로 엔티티 DB에 저장
         Article saved = articleRepository.save(article);
         log.info(saved.toString());
-        return "";
+        return "redirect:/articles/" + saved.getId(); // 리다이렉트 작성
     }
 
     @GetMapping("/articles/{id}")

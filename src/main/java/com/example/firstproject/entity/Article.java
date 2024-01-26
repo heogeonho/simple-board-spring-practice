@@ -5,13 +5,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @AllArgsConstructor //Article() 생성자 대체 어노테이션
 @NoArgsConstructor
-@ToString           //toString()      ''
-@Entity     //엔티티 선언
+@ToString           //toString()
+@Entity     //엔티티 선언'
+@Getter     //페이지 리다이렉트를 위해 getId 하려고 설정
 public class Article {
     @Id     //엔티티 대표값 지정
     @GeneratedValue //자동 생성 기능 추가(숫자)
